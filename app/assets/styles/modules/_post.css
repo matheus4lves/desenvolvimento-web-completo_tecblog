@@ -1,0 +1,11 @@
+.post {
+  max-width: 41.25rem;
+  float: left;
+  background-color: white;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  h2 {
+    margin: 0;
+  }
+}

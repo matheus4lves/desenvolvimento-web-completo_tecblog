@@ -1,0 +1,13 @@
+.main-section {
+  max-width: 41.25rem;
+  float: left;
+  background-color: white;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+
+  /* selects the last <div> element that is the last child of its parent,
+  (in this case, the <section> elemtent) */
+  div:last-child {
+    padding-bottom: 0;
+  }
+}

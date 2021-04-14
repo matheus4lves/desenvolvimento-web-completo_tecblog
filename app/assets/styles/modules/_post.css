@@ -1,11 +1,16 @@
 .post {
-  max-width: 41.25rem;
-  float: left;
-  background-color: white;
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
+  padding-bottom: 4.375rem;
 
-  h2 {
+  &__title {
     margin: 0;
+    color: $mainOrange;
+  }
+
+  &__date {
+    font: 0.8rem;
+    display: block;
+    border-bottom: 1px solid #f4f4f4;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.625rem;
   }
 }

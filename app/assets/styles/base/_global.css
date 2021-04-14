@@ -1,4 +1,4 @@
-.body {
+body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: $mainGray;
@@ -11,4 +11,17 @@ img {
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: $mainOrange;
+}
+
+a:hover {
+  text-decoration: underline;
 }

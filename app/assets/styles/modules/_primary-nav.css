@@ -13,8 +13,8 @@
   li {
     list-style-type: none;
     display: inline-block;
-    padding: 0 0 12px 0;
   }
+
   a:link,
   a:visited {
     color: white;

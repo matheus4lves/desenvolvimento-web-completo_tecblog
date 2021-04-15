@@ -1,0 +1,20 @@
+.recent-post {
+  padding: 0.5rem 0;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__snippet {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  &__link {
+    font-size: 0.8rem;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

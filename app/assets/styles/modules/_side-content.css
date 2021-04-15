@@ -1,7 +1,6 @@
 .side-content {
   max-width: 14.5rem;
   float: right;
-  background-color: white;
 
   h3 {
     background-color: $mainGray;
@@ -11,6 +10,12 @@
   }
 
   &__container {
-    padding: 0.625rem 0.625rem 2rem 0.625rem;
+    padding: 0.625rem;
+    margin-bottom: 1.25rem;
+    background-color: white;
+
+    div:last-child {
+      border-bottom: none;
+    }
   }
 }

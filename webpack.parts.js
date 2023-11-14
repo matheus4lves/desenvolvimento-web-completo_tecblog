@@ -65,6 +65,13 @@ exports.loadCSS = (postcssPlugins = []) => ({
   },
 });
 
+exports.devServer = () => ({
+  devServer: {
+    hot: false,
+  },
+});
+
+// PostCSS plugins
 exports.postcssImport = () => ({
   loader: "postcss-loader",
   options: {

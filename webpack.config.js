@@ -31,6 +31,7 @@ const commonConfig = merge([
   parts.generateHTML({ template: "/index.html" }),
   parts.loadImages(),
   parts.loadCSS(postcssPlugins),
+  parts.devServer(),
 ]);
 
 const config = {

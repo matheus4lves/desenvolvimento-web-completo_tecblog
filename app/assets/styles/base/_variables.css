@@ -2,3 +2,7 @@
 $lightGray: #ccc;
 $darkGray: #4e4e4e;
 $lightOrange: #f7b600;
+
+/* Menu properties */
+$menuWidth: 70vw;
+$menuAnimationDuration: 0.3s;

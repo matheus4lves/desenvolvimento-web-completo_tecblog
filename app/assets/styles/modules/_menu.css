@@ -1,0 +1,142 @@
+@keyframes slideIn {
+  /* Although the target retains this style when you configure
+  `animation-fill-mode: forwards;`, the style will not be available outside
+  this animation. Therefore, you need to set the `from` clause of the `slideOut`
+  animation to the same style. */
+  to {
+    right: -14px;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: -14px;
+  }
+
+  to {
+    right: calc(-$menuWidth - 14px);
+  }
+}
+
+.menu {
+  position: relative;
+
+  &__icon {
+    position: relative;
+
+    width: 20px;
+    height: 19px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transition: transform 0.3s ease-out;
+    }
+
+    /* Middle bar of the menu icon */
+    &-middle-bar {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      transition: transform 0.3s ease-out;
+    }
+
+    @mixin atSmall {
+      display: none;
+    }
+  }
+
+  &__icon--shape--x {
+    &::before {
+      transform-origin: bottom left;
+      transform: rotate(45deg) scale(1.2) translateY(-1px);
+    }
+
+    .menu__icon-middle-bar {
+      width: 0;
+    }
+
+    &::after {
+      transform-origin: top left;
+      transform: rotate(-45deg) scaleX(1.2) translateY(1px);
+    }
+  }
+
+  &__nav {
+    /* If the animation was to be applied at the moment of page load you could
+    have moved the positioning-related properties to the `from` keyframe. You cannot
+    do that because the animation will only be applied when the user clicks the menu
+    button, which means that if you did it the menu would be displayed without
+    being positioned. */
+    position: absolute;
+    top: 42px;
+    bottom: calc(-100vh + 42px);
+    right: calc(-$menuWidth - 14px);
+    background-color: $darkGray;
+    width: $menuWidth;
+
+    &--visible {
+      animation: $menuAnimationDuration forwards slideIn;
+    }
+
+    &--hidden {
+      animation: $menuAnimationDuration slideOut;
+    }
+
+    /* Visible by default on screens at least 600px wide */
+    @mixin atSmall {
+      position: static;
+      background: transparent;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto;
+
+    @mixin atSmall {
+      grid-template-columns: repeat(5, 1fr);
+      width: auto;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+
+    &:link,
+    &:visited {
+      color: white;
+    }
+
+    &:hover {
+      color: $lightOrange;
+      background-color: rgb(112, 112, 112);
+    }
+  }
+}

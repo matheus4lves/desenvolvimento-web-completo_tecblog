@@ -1,0 +1,32 @@
+.header {
+  display: grid;
+  /* The second column is occupied by the button, which should be 
+  something between 42 to 72px. I chose 48 which is a multiple of 16px. */
+  grid-template-columns: 1fr 48px;
+  /* Remember: if you don't explicitly define the grid `grid-template-rows` will be set
+  to `auto`  and the row will become as tall as its tallest cell */
+  grid-template-rows: 64px;
+  align-items: center;
+  justify-items: center;
+  background-color: $lightOrange;
+
+  &__heading {
+    /* To compensate the space taken by the menu icon and center the heading */
+    margin-inline-start: 48px;
+    color: $darkGray;
+
+    @mixin atSmall {
+      font-size: 3.5rem;
+      margin-inline-start: 0;
+    }
+  }
+
+  &__span {
+    color: white;
+  }
+
+  @mixin atSmall {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+}

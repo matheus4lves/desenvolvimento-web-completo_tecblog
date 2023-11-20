@@ -4,6 +4,8 @@
 @import "base/_global.css";
 @import "modules/_site-header.css";
 @import "modules/_primary-nav.css";
+@import "modules/_page.css";
+@import "modules/_text.css";
 @import "modules/_wrapper.css";
 @import "modules/_post.css";
 @import "modules/_main-section.css";
@@ -11,3 +13,4 @@
 @import "modules/_recent-post.css";
 @import "modules/_categories.css";
 @import "modules/_site-footer.css";
+@import "modules/_footer.css";

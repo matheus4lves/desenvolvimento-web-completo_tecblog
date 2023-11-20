@@ -1,16 +1,16 @@
-body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  background-color: #e6e6e6;
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 a {
@@ -19,7 +19,7 @@ a {
 
 a:link,
 a:visited {
-  color: $mainOrange;
+  color: $lightOrange;
 }
 
 a:hover {

@@ -3,7 +3,7 @@
   float: right;
 
   h3 {
-    background-color: $mainGray;
+    background-color: $lightGray;
     padding: 0.3125rem;
     margin: 0;
     color: #565656;

@@ -1,6 +1,6 @@
 .recent-post {
   padding: 0.5rem 0;
-  border-bottom: 1px dotted $mainGray;
+  border-bottom: 1px dotted $lightGray;
 
   &__title {
     margin: 0;
